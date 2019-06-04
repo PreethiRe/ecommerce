@@ -5,7 +5,9 @@
 #Add Orders 
 
 Post http://127.0.0.1:5000/orders
+
 Body {"itemId":"1","userId":"1","quantity":"1","price":"2500"}
+
 Response:
 {
     "statusCode": 1,
@@ -35,7 +37,9 @@ Response:
 #Add Items
 
 Post http://127.0.0.1:5000/items
+
 Content-Type:application/json
+
 Body:
 {"itemName":"laptop","price":"25000","stocks":"5"}
 
@@ -48,7 +52,9 @@ Response:
 #Update Items
 
 Put http://127.0.0.1:5000/items
+
 Content-Type:application/json
+
 Body:
 {"itemName":"laptop","price":"2500","stocks":"5","itemId":"1"}
 
@@ -61,6 +67,7 @@ Response:
 #Get item list/particular item:
 
 Get http://127.0.0.1:5000/items
+
 Get http://127.0.0.1:5000/items?itemId=1
 
 Response:
